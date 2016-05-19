@@ -1,0 +1,13 @@
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Aplicacao\bin\Debug\ArquiteturaModelo.Aplicacao.dll
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Aplicacao\bin\Debug\ArquiteturaModelo.Aplicacao.pdb
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Aplicacao\bin\Debug\ArquiteturaModelo.Dominio.dll
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Aplicacao\bin\Debug\ArquiteturaModelo.Infra.Contexto.dll
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Aplicacao\bin\Debug\ArquiteturaModelo.Infra.Repositorio.dll
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Aplicacao\bin\Debug\DapperExtensions.dll
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Aplicacao\bin\Debug\ArquiteturaModelo.Dominio.pdb
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Aplicacao\bin\Debug\ArquiteturaModelo.Infra.Contexto.pdb
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Aplicacao\bin\Debug\ArquiteturaModelo.Infra.Repositorio.pdb
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Aplicacao\bin\Debug\DapperExtensions.pdb
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Aplicacao\obj\Debug\ArquiteturaModelo.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Aplicacao\obj\Debug\ArquiteturaModelo.Aplicacao.dll
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Aplicacao\obj\Debug\ArquiteturaModelo.Aplicacao.pdb

@@ -1,0 +1,15 @@
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\bin\Debug\ArquiteturaModelo.Infra.Repositorio.dll
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\bin\Debug\ArquiteturaModelo.Infra.Repositorio.pdb
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\bin\Debug\ArquiteturaModelo.Dominio.dll
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\bin\Debug\ArquiteturaModelo.Infra.Contexto.dll
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\bin\Debug\Dapper.dll
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\bin\Debug\DapperExtensions.dll
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\bin\Debug\ArquiteturaModelo.Dominio.pdb
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\bin\Debug\ArquiteturaModelo.Infra.Contexto.pdb
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\bin\Debug\Dapper.pdb
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\bin\Debug\DapperExtensions.pdb
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\obj\Debug\ArquiteturaModelo.Infra.Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\obj\Debug\ArquiteturaModelo.Infra.Repositorio.dll
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\obj\Debug\ArquiteturaModelo.Infra.Repositorio.pdb
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\bin\Debug\SimpleInjector.dll
+C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Infra.Repositorio\bin\Debug\SimpleInjector.xml
