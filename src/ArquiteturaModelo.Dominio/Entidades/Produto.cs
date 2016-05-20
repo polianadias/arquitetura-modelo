@@ -1,4 +1,7 @@
-﻿namespace ArquiteturaModelo.Dominio.Entidades
+﻿using ArquiteturaModelo.Dominio.Entidades.Validacao.Produtos;
+using ArquiteturaModelo.Dominio.Validacoes;
+
+namespace ArquiteturaModelo.Dominio.Entidades
 {
     public class Produto
     {
