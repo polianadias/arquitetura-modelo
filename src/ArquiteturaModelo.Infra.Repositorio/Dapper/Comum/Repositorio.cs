@@ -18,53 +18,43 @@ namespace ArquiteturaModelo.Infra.Repositorio.Dapper.Comum
         {
             Context = context;
             Conn = context.Connection;
-
+            InicializaMapperDapper()
         }
 
         public static void InicializaMapperDapper()
         {
-
             DapperExtensions.DapperExtensions.SetMappingAssemblies(new[] { typeof(ProdutoMapper).Assembly });
         }
 
         public void Adicionar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = null)
         {
-            InicializaMapperDapper();
             Conn.Insert(entity, transaction, commandTimeout);        
-
         }
 
         public void Atualizar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = null)
         {
-            InicializaMapperDapper();
             Conn.Update(entity, transaction, commandTimeout);
         }
 
         public void Deletar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = null)
         {
-            InicializaMapperDapper();
             Conn.Delete(entity, transaction, commandTimeout);
         }
 
         public TEntity ObterPorId(int id)
         {
-            InicializaMapperDapper();
             return Conn.Get<TEntity>(id);
         }
 
         public IEnumerable<TEntity> ObterTodos()
         {
-            InicializaMapperDapper();
             return Conn.GetList<TEntity>();
-
         }
-
 
         public void Dispose()
         {
             GC.SuppressFinalize(this);
         }
-
 
     }
 }
