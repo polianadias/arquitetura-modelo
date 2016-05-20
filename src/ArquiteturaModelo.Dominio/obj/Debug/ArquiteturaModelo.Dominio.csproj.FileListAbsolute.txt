@@ -1,5 +1,0 @@
-C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Dominio\bin\Debug\ArquiteturaModelo.Dominio.dll
-C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Dominio\bin\Debug\ArquiteturaModelo.Dominio.pdb
-C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Dominio\obj\Debug\ArquiteturaModelo.Dominio.csprojResolveAssemblyReference.cache
-C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Dominio\obj\Debug\ArquiteturaModelo.Dominio.dll
-C:\Users\Mateus\Documents\Visual Studio 2015\Projects\ArquiteturaModelo\src\ArquiteturaModelo.Dominio\obj\Debug\ArquiteturaModelo.Dominio.pdb
