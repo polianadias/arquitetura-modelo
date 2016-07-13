@@ -1,25 +1,28 @@
-﻿using ArquiteturaModelo.Aplicacao.Interfaces;
+using ArquiteturaModelo.Aplicacao.Interfaces;
+using ArquiteturaModelo.Dominio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
+using System.Collections.Generic;
 
 namespace ArquiteturaModelo.Apresentacao.UI.MVC.Controllers
 {
     public class ProdutoController : Controller
     {
-        private readonly IProdutoAppServico _appServico;
-
-        public ProdutoController(IProdutoAppServico appServico)
-        {
-            _appServico = appServico;
-        }
 
         // GET: Produto
         public ActionResult Index()
         {
-            return View(_appServico.ObterTodos());
+            using (var _http = new HttpClient { BaseAddress = new Uri("http://localhost:60283/") })
+            {
+                var response = _http.GetAsync("api/produto").Result;
+                if (!response.IsSuccessStatusCode) return View("Ops! Tente mais tarde!");
+                return View(response.Content.ReadAsAsync<IEnumerable<Produto>>().Result);
+
+            }
         }
 
         // GET: Produto/Details/5
