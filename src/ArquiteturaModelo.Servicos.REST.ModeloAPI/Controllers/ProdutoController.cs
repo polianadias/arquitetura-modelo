@@ -1,4 +1,4 @@
-﻿using ArquiteturaModelo.Aplicacao.Interfaces;
+using ArquiteturaModelo.Aplicacao.Interfaces;
 using ArquiteturaModelo.Dominio.Entidades;
 using System;
 using System.Collections.Generic;
@@ -18,29 +18,50 @@ namespace ArquiteturaModelo.Servicos.REST.ModeloAPI.Controllers
             _appServico = appServico;
         }
 
-        // GET api/<controller>
+        /// <summary>
+        /// Obter todos os produtos 
+        /// </summary>
+        /// <remarks>
+        /// Obtem a lista de todos os produtos
+        /// </remarks>
+        /// <returns></returns>
+        /// <response code ="200"></response>
         public IEnumerable<Produto> Get()
         {
             return _appServico.ObterTodos();
         }
 
-        // GET api/<controller>/5
+        /// <summary>
+        /// Obter produto por id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Produto Get(int id)
         {
             return _appServico.ObterPorId(id);
         }
 
-        // POST api/<controller>
+        /// <summary>
+        /// Adicionar produto
+        /// </summary>
+        /// <param name="value"></param>
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT api/<controller>/5
+        /// <summary>
+        /// Atualizar produto
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="value"></param>
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/<controller>/5
+        /// <summary>
+        /// Deletar produto
+        /// </summary>
+        /// <param name="id"></param>
         public void Delete(int id)
         {
         }
