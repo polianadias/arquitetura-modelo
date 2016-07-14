@@ -12,11 +12,9 @@ namespace ArquiteturaModelo.Infra.Repositorio.Dapper.Comum
     {
 
         public IDbConnection Conn { get; set; }
-        public IDapperContexto Context { get; private set; }
-
+        
         public Repositorio(IDapperContexto context)
         {
-            Context = context;
             Conn = context.Connection;
             InicializaMapperDapper()
         }
@@ -26,35 +24,39 @@ namespace ArquiteturaModelo.Infra.Repositorio.Dapper.Comum
             DapperExtensions.DapperExtensions.SetMappingAssemblies(new[] { typeof(ProdutoMapper).Assembly });
         }
 
-        public void Adicionar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = null)
+       public dynamic Adicionar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = null)
         {
-            Conn.Insert(entity, transaction, commandTimeout);        
+            return entity == null ? null : Conn.Insert(entity, transaction, commandTimeout);
         }
 
-        public void Atualizar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = null)
+        public bool Atualizar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = null)
         {
-            Conn.Update(entity, transaction, commandTimeout);
+            return entity != null && Conn.Update(entity, transaction, commandTimeout);
         }
 
-        public void Deletar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = null)
+        public bool Deletar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = null)
         {
-            Conn.Delete(entity, transaction, commandTimeout);
+            return entity != null && Conn.Delete(entity, transaction, commandTimeout);
         }
 
-        public TEntity ObterPorId(int id)
+        public TEntity ObterPorId(int id, IDbTransaction transaction = null, int? commandTimeout = null)
         {
-            return Conn.Get<TEntity>(id);
+            return Conn.Get<TEntity>(id, transaction, commandTimeout);
         }
 
-        public IEnumerable<TEntity> ObterTodos()
+        public IEnumerable<TEntity> ObterTodos(IDbTransaction transaction = null, int? commandTimeout = null)
         {
-            return Conn.GetList<TEntity>();
+            return Conn.GetList<TEntity>(null, null, transaction, commandTimeout);
+        }
+
+        public IEnumerable<TEntity> ObterPor(object @where = null, object order = null, IDbTransaction transaction = null, int? commandTimeout = null)
+        {
+            return Conn.GetList<TEntity>(@where);
         }
 
         public void Dispose()
         {
             GC.SuppressFinalize(this);
         }
-
     }
 }
