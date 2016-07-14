@@ -11,6 +11,7 @@ namespace ArquiteturaModelo.Aplicacao.Interfaces
     {
         TEntity ObterPorId(int id);
         IEnumerable<TEntity> ObterTodos();
+        IEnumerable<TEntity> ObterPor(object @where = null, object order = null);
         ValidationResult Adicionar(TEntity entity);
         ValidationResult Atualizar(TEntity entity);
         ValidationResult Deletar(TEntity entity);
