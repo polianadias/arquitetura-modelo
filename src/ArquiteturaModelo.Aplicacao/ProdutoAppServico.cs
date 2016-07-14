@@ -58,5 +58,11 @@ namespace ArquiteturaModelo.Aplicacao
         {
             return _servico.ObterTodos();
         }
+        
+          public IEnumerable<Produto> ObterPor(object @where = null, object order = null)
+        {
+            return _servico.ObterPor(@where);
+        }
+        
     }
 }
