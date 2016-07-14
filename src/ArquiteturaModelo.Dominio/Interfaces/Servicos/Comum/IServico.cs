@@ -9,7 +9,8 @@ namespace ArquiteturaModelo.Dominio.Interfaces.Servicos.Comum
         ValidationResult Adicionar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = null);
         ValidationResult Atualizar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = null);
         ValidationResult Deletar(TEntity entity, IDbTransaction transaction = null, int? commandTimeout = null);
-        TEntity ObterPorId(int id);
-        IEnumerable<TEntity> ObterTodos();
+        TEntity ObterPorId(int id, IDbTransaction transaction = null, int? commandTimeout = null);
+        IEnumerable<TEntity> ObterTodos(IDbTransaction transaction = null, int? commandTimeout = null);
+        IEnumerable<TEntity> ObterPor(object where = null, object order = null, IDbTransaction transaction = null, int? commandTimeout = null);
     }
 }
