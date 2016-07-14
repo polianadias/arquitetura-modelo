@@ -11,11 +11,9 @@ namespace ArquiteturaModelo.Dominio.Servicos.Comum
 {
     public class Servico<TEntity> : IServico<TEntity> where TEntity : class
     {
-    
         private readonly IRepositorio<TEntity> _repositorio;
         private readonly ValidationResult _validationResult;
 
-      
         public Servico(IRepositorio<TEntity> repositorio)
         {
             _repositorio = repositorio;
@@ -35,7 +33,9 @@ namespace ArquiteturaModelo.Dominio.Servicos.Comum
             if (selfValidationEntity != null && !selfValidationEntity.IsValid)
                 return selfValidationEntity.ValidationResult;
 
-            _repositorio.Adicionar(entity, transaction);
+            var adicionou = _repositorio.Adicionar(entity);
+            if (adicionou == null)
+                _validationResult.Add("A Entidade que você está tentando gravar está nula, por favor tente novamente!" + entity, "Adicionar");
             return _validationResult;
         }
 
@@ -48,7 +48,9 @@ namespace ArquiteturaModelo.Dominio.Servicos.Comum
             if (selfValidationEntity != null && !selfValidationEntity.IsValid)
                 return selfValidationEntity.ValidationResult;
 
-            _repositorio.Atualizar(entity, transaction);
+            var atualizar = _repositorio.Atualizar(entity);
+            if (!atualizar)
+                _validationResult.Add("A Entidade que você está tentando atualizar está nula, por favor tente novamente! Nome: " + entity, "Atualizar");
             return _validationResult;
         }
 
@@ -57,18 +59,25 @@ namespace ArquiteturaModelo.Dominio.Servicos.Comum
             if (!ValidationResult.IsValid)
                 return ValidationResult;
 
-            _repositorio.Deletar(entity, transaction);
+            var deletou = _repositorio.Deletar(entity);
+            if (!deletou)
+                _validationResult.Add("A Entidade que você está tentando deletar está nula, por favor tente novamente! Nome: " + entity, "Deletar");
             return _validationResult;
         }
 
-        public TEntity ObterPorId(int id)
+         public TEntity ObterPorId(int id, IDbTransaction transaction = null, int? commandTimeout = null)
         {
             return _repositorio.ObterPorId(id);
         }
 
-        public IEnumerable<TEntity> ObterTodos()
+        public IEnumerable<TEntity> ObterTodos(IDbTransaction transaction = null, int? commandTimeout = null)
         {
             return _repositorio.ObterTodos();
+        }
+
+        public IEnumerable<TEntity> ObterPor(object @where = null, object order = null, IDbTransaction transaction = null, int? commandTimeout = null)
+        {
+            return _repositorio.ObterPor(@where);
         }
     }
 }
