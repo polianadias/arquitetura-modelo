@@ -16,7 +16,7 @@ namespace ArquiteturaModelo.Infra.Repositorio.Dapper.Comum
         public Repositorio(IDapperContexto context)
         {
             Conn = context.Connection;
-            InicializaMapperDapper()
+            InicializaMapperDapper();
         }
 
         public static void InicializaMapperDapper()
