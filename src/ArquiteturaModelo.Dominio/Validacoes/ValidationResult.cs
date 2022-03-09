@@ -15,7 +15,7 @@ namespace ArquiteturaModelo.Dominio.Validacoes
             _erros = new List<ValidationError>();
         }
 
-        public ValidationResult Add(string errorMessage)
+        public ValidationResult Add(string errorMessage, string message)
         {
             _erros.Add(new ValidationError(errorMessage));
             return this;
